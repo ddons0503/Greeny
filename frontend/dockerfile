@@ -1,0 +1,15 @@
+# Use lightweight Nginx image
+
+FROM nginx:alpine
+
+#Copy build/static files to nginx html folder
+
+COPY . /usr/share/nginx/html
+
+#Expose port
+
+EXPOSE 80
+
+# Run nginx
+
+CMD ["nginx", "-g", "daemon off;"]

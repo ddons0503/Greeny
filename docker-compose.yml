@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: greeny_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - greeny_network
+
+  backend:
+    build: ./backend
+    container_name: greeny_backend
+    restart: always
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: db_greeny_new
+    networks:
+      - greeny_network
+
+  db:
+    image: mysql:5.7
+    container_name: greeny_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_greeny_new
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - greeny_network
+
+volumes:
+  db_data:
+
+networks:
+  greeny_network:
+    driver: bridge

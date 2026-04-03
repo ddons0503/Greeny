@@ -1,0 +1,16 @@
+<script src="<?php echo base_url(); ?>assets/vendor/bootstrap/jquery-1.12.4.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/bootstrap/popper.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/countdown/countdown.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/niceselect/nice-select.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/slickslider/slick.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/venobox/venobox.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/nice-select.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/countdown.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/accordion.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/venobox.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/slick.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/script.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/js/script1.js"></script>
